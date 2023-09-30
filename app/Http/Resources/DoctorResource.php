@@ -20,6 +20,8 @@ class DoctorResource extends JsonResource
             'name'=>$this->name,
             'city'=>$this->city,
            'email'=>$this->email,
+           'major'=>$this->major,
+           'image'=>$this->getMedia('doctor_image'),
 
         ];
     }

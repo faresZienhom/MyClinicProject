@@ -23,7 +23,6 @@ class DoctorFactory extends Factory
             "city" => fake()->city(),
             "email" => fake()->safeEmail(),
             "password" => Hash::make('password'),
-            "image" => fake()->imageUrl(),
             "major_id" => Major::inRandomOrder()->first()?->id
         ];
     }

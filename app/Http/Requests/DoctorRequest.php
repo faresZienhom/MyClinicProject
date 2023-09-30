@@ -26,6 +26,8 @@ class DoctorRequest extends FormRequest
             'name'=>'required',
             'city'=>'required',
             'email'=>'required',
+            'images'=>'required|array',
+            'images.*'=>'image'
 
         ];
 

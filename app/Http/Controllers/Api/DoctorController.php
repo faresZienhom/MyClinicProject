@@ -26,19 +26,47 @@ class DoctorController extends Controller
         $data['password'] = Hash::make($data['password']);
 
        $doctor = Doctor::create($data);
+       foreach ($request->images as $image) {
+        $doctor->addMedia($image)->toMediaCollection('doctor_images');
+       }
        return response()->json($doctor,201);
 
-
+    }
       // away to hash password
      // Doctor::create([
       //...$request->all(),
       //'password' => Hash::make($request->Password
-
-    //
-
     //]);
 
-}
+    function deletedoctorimage($id,request $request){
+
+        $request->validate(['image_id' => 'required']);
+        $doctor = Doctor::find($id);
+        $doctor->deleteMedia($request->image_id);
+
+        return response()->json(['message'=> 'doctor image deleted successfully']);
+
+    }
+    function adddoctorimage($id){
+
+        $doctor = Doctor::find($id);
+        $doctor->addMultipleMediaFromRequest(['images'])->each(function($fileAdder){
+            $fileAdder->toMediaCollection('doctor_images');
+        });
+        return response()->json(['message'=> 'doctor image added successfully']);
+
+    }
+    function cleardoctorimage($id,request $request){
+
+        $doctor = Doctor::find($id);
+        $doctor->ClearMediaCollection('doctor_images');
+
+        return response()->json(['message'=> 'doctor image cleared successfully']);
+
+    }
+
+
+
      function show($id)
     {
         try{

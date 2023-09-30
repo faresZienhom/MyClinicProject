@@ -29,6 +29,9 @@ Route::delete('/doctors/{id}',[DoctorController::class,'delete']);
 Route::delete('/doctors/{id}/force',[DoctorController::class,'forcedelete']);
 Route::post('/doctors/{id}/restore',[DoctorController::class,'restore']);
 
+Route::delete('/doctor/{id}/delete/image',[DoctorController::class,'deletedoctorimage']);
+Route::post('/doctor/{id}/add/image',[DoctorController::class,'adddoctorimage']);
+Route::post('/doctor/{id}/clear/image',[DoctorController::class,'cleardoctorimage']);
 
 
 

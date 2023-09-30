@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('city');
-            $table->string('image')->nullable();
             $table->foreignId('major_id')->nullable();
             $table->foreign('major_id')->references('id')->on('majors');
             $table->softDeletes();
