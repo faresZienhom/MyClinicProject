@@ -18,8 +18,8 @@
           <h1 class="h1">Links</h1>
           <div class="links d-flex gap-2 flex-wrap">
               <a href="/home" class="link text-white">Home</a>
-              <a href="/viewmajors" class="link text-white">Majors</a>
-              <a href="/viewdoctors" class="link text-white">Doctors</a>
+              <a href="/major" class="link text-white">Majors</a>
+              <a href="/doctors" class="link text-white">Doctors</a>
               <a href="/login" class="link text-white">Login</a>
               <a href="/register" class="link text-white">Register</a>
               <a href="/contactus" class="link text-white">Contact</a>

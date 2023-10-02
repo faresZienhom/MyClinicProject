@@ -9,31 +9,74 @@
         </ol>
     </nav>
     <div class="d-flex flex-column gap-3 account-form mx-auto mt-5">
-        
-        <form class="form"    action= "<?php $_SERVER['PHP_SELF'];?>"    method="POST">
+
+
+        @if(session()->has('success'))
+        <div class=" alert alert-success">
+        {{ session()->get('success') }}
+       </div>
+        @endif
+
+        <form class="form"    action="{{ route('contactus.store') }}"    method="POST">
+            @csrf
             <div class="form-items">
                 <div class="mb-3">
                     <label class="form-label required-label" for="name">Name</label>
-                    <input type="text" class="form-control" name = "name" id="name" required>
+                    <input type="text" class="form-control" name = "name" id="name" name="name">
                 </div>
+                @error('name')
+                <div class=" alert alert-danger">
+                         {{ $message }}
+                </div>
+
+                @enderror
+
                 <div class="mb-3">
                     <label class="form-label required-label" for="phone">Phone</label>
-                    <input type="tel" class="form-control" name = "phone" id="phone" required>
+                    <input type="tel" class="form-control" name = "phone" id="phone" name="phone">
                 </div>
+                @error('phone')
+                <div class=" alert alert-danger">
+                         {{ $message }}
+                </div>
+
+                @enderror
+
                 <div class="mb-3">
                     <label class="form-label required-label" for="email">Email</label>
-                    <input type="email" class="form-control" name = "email" id="email" required>
+                    <input type="email" class="form-control" name = "email" id="email" name="email">
                 </div>
+                @error('email')
+                <div class=" alert alert-danger">
+                         {{ $message }}
+                </div>
+
+                @enderror
+
                 <div class="mb-3">
                     <label class="form-label required-label" for="subject">subject</label>
-                    <input type="text" class="form-control" name = "subject" id="subject" required>
+                    <input type="text" class="form-control" name = "subject" id="subject" name="subject">
                 </div>
+                @error('subject')
+                <div class=" alert alert-danger">
+                         {{ $message }}
+                </div>
+
+                @enderror
+
                 <div class="mb-3">
                     <label class="form-label required-label" for="message">message</label>
-                    <textarea class="form-control" id="message" name = "message" required></textarea>
+                    <textarea class="form-control" id="message" name = "message" name="message"></textarea>
                 </div>
+                @error('message')
+                <div class=" alert alert-danger">
+                         {{ $message }}
+                </div>
+
+                @enderror
+
             </div>
-            
+
             <div class="form-group p-2 my-1">
             <input type="submit" class="btn btn-primary" value="Submit" name="submit">
             </div>

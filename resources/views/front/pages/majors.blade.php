@@ -9,102 +9,18 @@
         </ol>
     </nav>
     <div class="majors-grid">
+        @foreach ($majors as $major)
+
         <div class="card p-2" style="width: 18rem;">
             <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
+            alt="major">
             <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
+                <h4 class="card-title fw-bold text-center">{{ $major->title}} </h4>
                 <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
             </div>
         </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Major title</h4>
-                <a href="viewbooking" class="btn btn-outline-primary card-button">Browse Doctors</a>
-            </div>
-        </div>
+
+        @endforeach
     </div>
 
     <nav class="mt-5" aria-label="navigation">

@@ -25,6 +25,7 @@ class BookingRequest extends FormRequest
             'name'=>'required',
             'email'=>'required',
             'phone'=>'required',
+            'doctor_id'=>'required|exists:doctors,id',
 
         ];
     }

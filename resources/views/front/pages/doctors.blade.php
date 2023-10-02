@@ -136,126 +136,19 @@
         </div>
     </div>
     <div class="doctors-grid">
+        @foreach ($doctors as $doctor)
+
         <div class="card p-2" style="width: 18rem;">
             <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
+            alt="major">
             <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
+                <h4 class="card-title fw-bold text-center">{{ $doctor->name}} </h4>
+                <h6 class="card-title fw-bold text-center">{{ $doctor->major?->title }}</h6>
                 <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
                     appointment</a>
+                </div>
             </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
-        <div class="card p-2" style="width: 18rem;">
-            <img src="{{asset("front")}}/assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
-                alt="major">
-            <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                <h4 class="card-title fw-bold text-center">Doctor Name</h4>
-                <h6 class="card-title fw-bold text-center">Major</h6>
-                <a href="viewbooking" doctor.html" class="btn btn-outline-primary card-button">Book an
-                    appointment</a>
-            </div>
-        </div>
+            @endforeach
 
 
     </div>

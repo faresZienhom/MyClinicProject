@@ -12,9 +12,9 @@
           <div class="d-flex gap-3 flex-wrap justify-content-center" role="group">
               <a type="button" class="btn btn-outline-light navigation--button" href="/home">Home</a>
               <a type="button" class="btn btn-outline-light navigation--button"
-                  href="/viewmajors">majors</a>
+                  href="/major">majors</a>
               <a type="button" class="btn btn-outline-light navigation--button"
-                  href="/viewdoctors">Doctors</a>
+                  href="/doctors">Doctors</a>
               <a type="button" class="btn btn-outline-light navigation--button" href="/login">login</a>
 
               <li class="btn btn-outline-light navigation--button">

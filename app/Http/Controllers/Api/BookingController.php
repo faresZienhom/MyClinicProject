@@ -7,6 +7,7 @@ use App\Http\Requests\BookingRequest;
 use App\Http\Resources\BookingResource;
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -23,7 +24,8 @@ class BookingController extends Controller
 
 
 
-       $Booking = Booking::create($request->all());
+       $Booking = Booking::create($request->validated());
+       Mail::to($Booking->doctor->email)->send(new NewBookingMail($Booking));
        return response()->json($Booking,201);
 
 

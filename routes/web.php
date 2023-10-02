@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DoctorController;
+
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\MajorController;
 use App\Http\Controllers\RateController;
 use App\Http\Controllers\UserController;
@@ -33,22 +35,20 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::get('/home', function () {
-    return view('front.pages.index');
-});
 
 Route::get('/contactus', function () {
     return view('front.pages.contact');
 });
-Route::get('/viewdoctors', function () {
-    return view('front.pages.doctors');
-});
-Route::get('/viewmajors', function () {
-    return view('front.pages.majors');
-});
 Route::get('/viewbooking', function () {
     return view('front.pages.bookingdoctor');
 });
+
+Route::get('/home', [HomeController::class, 'index']);
+Route::get('/doctors', [HomeController::class, 'showdoctor']);
+Route::get('/major', [HomeController::class, 'showmajor']);
+Route::post('/bookings', [HomeController::class, 'store'])->name('bookings.store');
+Route::post('/contactus', [HomeController::class, 'createcontact'])->name('contactus.store');
+
 
 
 Route::middleware(['auth'])->group(function(){
